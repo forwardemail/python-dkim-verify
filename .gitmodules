@@ -1,0 +1,3 @@
+[submodule "dkimpy"]
+	path = dkimpy
+	url = https://git.launchpad.net/dkimpy
