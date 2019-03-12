@@ -28,9 +28,10 @@
    python --version
    ```
 
-2. Install the packages [pynacl][] and [authres][] using `pip` globally:
+2. Install the packages [dkimpy][], [pynacl][], and [authres][] using `pip` globally:
 
    ```sh
+   pip install dkimpy
    pip install pynacl
    pip install authres
    ```
