@@ -7,10 +7,11 @@ const filePath = path.join(__dirname, 'dkimpy', 'dkim', 'dkimverify.py');
 // ensure python installed
 if (!which('python')) throw new Error(`Python v2.7+ or v3.5+ is required`);
 
-const options = { silent: true, async: true };
+const silent = process.env.NODE_ENV !== 'test';
+const options = { silent, async: true };
 
 // ensure python v2.7+ or v3.5+
-let version = exec('python --version', { silent: true });
+let version = exec('python --version', { silent });
 version = (version.stdout ? version.stdout : version.stderr)
   .split(' ')[1]
   .trim();
