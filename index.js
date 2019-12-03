@@ -14,6 +14,7 @@ const options = { silent, async: true };
 let version = exec('python --version', { silent });
 version = (version.stdout ? version.stdout : version.stderr)
   .split(' ')[1]
+  .replace(/[^0-9.]/g, '')
   .trim();
 
 if (semver.satisfies(version, '> 3') && !semver.satifies(version, '>= 3.5'))
