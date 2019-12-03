@@ -12,10 +12,9 @@ const options = { silent, async: true };
 
 // ensure python v2.7+ or v3.5+
 let version = exec('python --version', { silent });
-version = (version.stdout ? version.stdout : version.stderr)
-  .split(' ')[1]
-  .replace(/[^0-9.]/g, '')
-  .trim();
+version = semver.coerce(
+  (version.stdout || version.stderr).split(' ')[1].trim()
+);
 
 if (semver.satisfies(version, '> 3') && !semver.satifies(version, '>= 3.5'))
   throw new Error(
