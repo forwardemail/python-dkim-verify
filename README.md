@@ -22,38 +22,16 @@
 
 ## Requirements
 
-1. Ensure that you have a Python version of >=2.7 or >= 3.5 installed per [dkimpy][] requirements:
+1. Ensure that you have a Python version of >= 3.5 installed per [dkimpy][] requirements (note that Python v3 is required because of a bug with DNS recursive CNAME lookups on v2.7):
 
    ```sh
-   python --version
+   python3 --version
    ```
 
-2. Install the packages [dkimpy][], [pynacl][], and [authres][] using `pip` globally:
+2. Install the packages [dkimpy][]:
 
    ```sh
-   pip install dkimpy
-   pip install pynacl
-   pip install authres
-   ```
-
-3. Install the DNS package based off your version of Python:
-
-   > Install [dnspython][] if possible:
-
-   ```sh
-   pip install dnspython
-   ```
-
-   > Otherwise If you are using Python version >= 3.5+:
-
-   ```sh
-   pip install py3dns
-   ```
-
-   > Otherwise install the older version (note `2.3.4` is the only version that seems to work OK on Mac):
-
-   ```sh
-   pip install pydns==2.3.4
+   pip3 install dkimpy
    ```
 
 
@@ -113,12 +91,6 @@ Note that `result` is either `true` or `false` depending on whether or not DKIM 
 [npm]: https://www.npmjs.com/
 
 [yarn]: https://yarnpkg.com/
-
-[pynacl]: https://pypi.org/project/PyNaCl/
-
-[authres]: https://pypi.org/project/authres/
-
-[dnspython]: https://pypi.org/project/dnspython/
 
 [dkimpy]: https://pypi.org/project/dkimpy/
 

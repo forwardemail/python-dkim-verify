@@ -4,10 +4,7 @@ before_install:
   - nvm install v8.12.0
 install:
   - npm install -g yarn
-  - pip install dkimpy
-  - pip install pynacl
-  - pip install authres
-  - pip install dnspython
+  - pip3 install dkimpy
   - yarn
 script:
   npm run test-coverage
