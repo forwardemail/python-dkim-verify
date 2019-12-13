@@ -10,7 +10,7 @@ if (!which('python3')) throw new Error(`Python v3.5+ is required`);
 const silent = process.env.NODE_ENV !== 'test';
 const options = { silent, async: true };
 
-// ensure python v2.7+ or v3.5+
+// ensure python v3.5+
 let version = exec('python3 --version', { silent });
 version = semver.coerce(
   (version.stdout || version.stderr).split(' ')[1].trim()
