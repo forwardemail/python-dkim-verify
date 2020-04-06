@@ -23,3 +23,13 @@ test('returns pass', async t => {
   const result = await dkimVerify(pass);
   t.is(result, true);
 });
+
+test('returns pass with 0 index', async t => {
+  const result = await dkimVerify(pass, 0);
+  t.is(result, true);
+});
+
+test('returns fail with 1 index', async t => {
+  const result = await dkimVerify(pass, 1);
+  t.is(result, false);
+});
