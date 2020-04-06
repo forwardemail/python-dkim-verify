@@ -2,7 +2,7 @@ const path = require('path');
 const { which, exec } = require('shelljs');
 const semver = require('semver');
 
-const filePath = path.join(__dirname, 'dkimpy', 'dkim', 'dkimverify.py');
+const filePath = path.join(__dirname, 'dkimverify.py');
 
 // ensure python installed
 if (!which('python3')) throw new Error(`Python v3.5+ is required`);
@@ -21,9 +21,9 @@ if (!semver.satisfies(version, '>= 3.5'))
     `Python v3.5+ is required, you currently have v${version} installed`
   );
 
-module.exports = function(rawEmail) {
+module.exports = function(rawEmail, index = 0) {
   return new Promise((resolve, reject) => {
-    const child = exec(`python3 ${filePath}`, options);
+    const child = exec(`python3 ${filePath} --index ${index}`, options);
     const stdout = [];
     const stderr = [];
     child.stderr.on('data', data => {
