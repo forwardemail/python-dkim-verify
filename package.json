@@ -1,7 +1,7 @@
 {
   "name": "python-dkim-verify",
   "description": "Node.js wrapper around Python's dkim.verify function which conforms to RFC spec",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com/)",
   "ava": {
     "failFast": true,
