@@ -1,3 +1,5 @@
+**This package is deprecated in favor of dkimpy instead, see <https://github.com/forwardemail/dkimpy/> for more information.**
+
 # python-dkim-verify
 
 [![build status](https://img.shields.io/travis/com/niftylettuce/python-dkim-verify.svg)](https://travis-ci.com/niftylettuce/python-dkim-verify)
